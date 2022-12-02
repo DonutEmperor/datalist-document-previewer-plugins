@@ -1,0 +1,21 @@
+[{
+        "title" : "@@datalist.WordViewer.config@@",
+        "properties" : [
+        {
+                "name" : "formDefId",
+                "label" : "@@datalist.WordViewer.form@@",
+                "type" : "selectbox",
+                "options_ajax" : "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/forms/options",
+                "required" : "True"
+        },
+        {
+                "name" : "attachment",
+                "label" : "@@datalist.WordViewer.attachment@@",
+                "type" : "checkbox",
+                "options" : [{
+                    "value" : "true",
+                    "label" : ""
+        }]
+            
+        }]
+}]
