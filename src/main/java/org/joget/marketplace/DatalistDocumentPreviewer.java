@@ -20,8 +20,8 @@ import org.joget.workflow.util.WorkflowUtil;
  *
  * @author User
  */
-public class DocumentPreviewer extends DataListColumnFormatDefault{
-    private final static String MESSAGE_PATH = "message/form/DocumentPreviewer";
+public class DatalistDocumentPreviewer extends DataListColumnFormatDefault{
+    private final static String MESSAGE_PATH = "message/form/DatalistDocumentPreviewer";
     
     @Override
     public String format(DataList dataList, DataListColumn column, Object row, Object value) {
@@ -78,7 +78,7 @@ public class DocumentPreviewer extends DataListColumnFormatDefault{
 
     @Override
     public String getName() {
-        return "Document Previewer";
+        return "Datalist Document Previewer";
     }
 
     @Override
@@ -88,12 +88,12 @@ public class DocumentPreviewer extends DataListColumnFormatDefault{
 
     @Override
     public String getDescription() {
-        return AppPluginUtil.getMessage("org.joget.marketplace.DocumentPreviewer.pluginDesc", getClassName(), MESSAGE_PATH);
+        return AppPluginUtil.getMessage("org.joget.marketplace.DatalistDocumentPreviewer.pluginDesc", getClassName(), MESSAGE_PATH);
     }
 
     @Override
     public String getLabel() {
-        return AppPluginUtil.getMessage("org.joget.marketplace.DocumentPreviewer.pluginLabel", getClassName(), MESSAGE_PATH);
+        return AppPluginUtil.getMessage("org.joget.marketplace.DatalistDocumentPreviewer.pluginLabel", getClassName(), MESSAGE_PATH);
     }
 
     @Override
@@ -103,7 +103,7 @@ public class DocumentPreviewer extends DataListColumnFormatDefault{
 
     @Override
     public String getPropertyOptions() {
-        return AppUtil.readPluginResource(getClassName(), "/properties/form/documentPreviewer.json", null, true, MESSAGE_PATH);
+        return AppUtil.readPluginResource(getClassName(), "/properties/form/datalistDocumentPreviewer.json", null, true, MESSAGE_PATH);
     }
     
     //method to get file extension

@@ -1,16 +1,16 @@
 [{
-        "title" : "@@datalist.DocumentPreviewer.config@@",
+        "title" : "@@datalist.DatalistDocumentPreviewer.config@@",
         "properties" : [
         {
                 "name" : "formDefId",
-                "label" : "@@datalist.DocumentPreviewer.form@@",
+                "label" : "@@datalist.DatalistDocumentPreviewer.form@@",
                 "type" : "selectbox",
                 "options_ajax" : "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/forms/options",
                 "required" : "True"
         },
         {
                 "name" : "attachment",
-                "label" : "@@datalist.DocumentPreviewer.attachment@@",
+                "label" : "@@datalist.DatalistDocumentPreviewer.attachment@@",
                 "type" : "checkbox",
                 "options" : [{
                     "value" : "true",
