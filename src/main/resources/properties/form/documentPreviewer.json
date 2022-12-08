@@ -1,16 +1,16 @@
 [{
-        "title" : "@@datalist.WordViewer.config@@",
+        "title" : "@@datalist.DocumentPreviewer.config@@",
         "properties" : [
         {
                 "name" : "formDefId",
-                "label" : "@@datalist.WordViewer.form@@",
+                "label" : "@@datalist.DocumentPreviewer.form@@",
                 "type" : "selectbox",
                 "options_ajax" : "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/forms/options",
                 "required" : "True"
         },
         {
                 "name" : "attachment",
-                "label" : "@@datalist.WordViewer.attachment@@",
+                "label" : "@@datalist.DocumentPreviewer.attachment@@",
                 "type" : "checkbox",
                 "options" : [{
                     "value" : "true",

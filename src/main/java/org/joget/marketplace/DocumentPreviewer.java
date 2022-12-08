@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package org.joget.marketplace;
-import com.google.common.io.Files;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import javax.servlet.http.HttpServletRequest;
@@ -21,8 +20,8 @@ import org.joget.workflow.util.WorkflowUtil;
  *
  * @author User
  */
-public class WordViewer extends DataListColumnFormatDefault{
-    private final static String MESSAGE_PATH = "message/form/WordViewer";
+public class DocumentPreviewer extends DataListColumnFormatDefault{
+    private final static String MESSAGE_PATH = "message/form/DocumentPreviewer";
     
     @Override
     public String format(DataList dataList, DataListColumn column, Object row, Object value) {
@@ -62,7 +61,7 @@ public class WordViewer extends DataListColumnFormatDefault{
                             result += ", ";
                         }
                         else if(getFileExtension(encodedFileName).equals("docx") || getFileExtension(encodedFileName).equals("doc")){
-                            result += "<a href=\""+ "https://view.officeapps.live.com/op/embed.aspx?src=https://" + request.getServerName() + ":" + request.getServerPort() + filePath+"\" target=\"_blank\">"+ StringUtil.stripAllHtmlTag(fileName)+"</a>";
+                            result += "<a href=\""+ "https://docs.google.com/viewer?url=" + request.getServerName() + ":" + request.getServerPort() + filePath + "&embedded=true" + "\" target=\"_blank\">"+ StringUtil.stripAllHtmlTag(fileName)+"</a>";
                         }else{
                             result += "<a href=\""+filePath+"\" target=\"_blank\">"+StringUtil.stripAllHtmlTag(fileName)+"</a>";
                         }
@@ -79,7 +78,7 @@ public class WordViewer extends DataListColumnFormatDefault{
 
     @Override
     public String getName() {
-        return "Word Viewer Datalist Action";
+        return "Document Previewer";
     }
 
     @Override
@@ -89,12 +88,12 @@ public class WordViewer extends DataListColumnFormatDefault{
 
     @Override
     public String getDescription() {
-        return AppPluginUtil.getMessage("org.joget.marketplace.WordViewer.pluginDesc", getClassName(), MESSAGE_PATH);
+        return AppPluginUtil.getMessage("org.joget.marketplace.DocumentPreviewer.pluginDesc", getClassName(), MESSAGE_PATH);
     }
 
     @Override
     public String getLabel() {
-        return AppPluginUtil.getMessage("org.joget.marketplace.WordViewer.pluginLabel", getClassName(), MESSAGE_PATH);
+        return AppPluginUtil.getMessage("org.joget.marketplace.DocumentPreviewer.pluginLabel", getClassName(), MESSAGE_PATH);
     }
 
     @Override
@@ -104,7 +103,7 @@ public class WordViewer extends DataListColumnFormatDefault{
 
     @Override
     public String getPropertyOptions() {
-        return AppUtil.readPluginResource(getClassName(), "/properties/form/wordViewer.json", null, true, MESSAGE_PATH);
+        return AppUtil.readPluginResource(getClassName(), "/properties/form/documentPreviewer.json", null, true, MESSAGE_PATH);
     }
     
     //method to get file extension

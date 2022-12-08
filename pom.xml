@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.joget.marketplace</groupId>
-    <artifactId>word-viewer-plugins</artifactId>
+    <artifactId>document-previewer-plugins</artifactId>
     <packaging>bundle</packaging>
     <version>8.0-SNAPSHOT</version>
-    <name>word-viewer-plugins</name>
+    <name>document-previewer-plugins</name>
     <url>http://www.joget.org</url>
     <build>
         <plugins>

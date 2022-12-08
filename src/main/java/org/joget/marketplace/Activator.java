@@ -14,7 +14,7 @@ public class Activator implements BundleActivator {
         registrationList = new ArrayList<ServiceRegistration>();
 
         //Register plugin here
-        registrationList.add(context.registerService(WordViewer.class.getName(), new WordViewer(), null));
+        registrationList.add(context.registerService(DocumentPreviewer.class.getName(), new DocumentPreviewer(), null));
     }
 
     public void stop(BundleContext context) {
