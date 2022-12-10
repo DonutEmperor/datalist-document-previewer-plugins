@@ -61,7 +61,7 @@ public class DatalistDocumentPreviewer extends DataListColumnFormatDefault{
                             result += ", ";
                         }
                         else if(getFileExtension(encodedFileName).equals("docx") || getFileExtension(encodedFileName).equals("doc")){
-                            result += "<a href=\""+ "https://docs.google.com/viewer?url=" + request.getServerName() + ":" + request.getServerPort() + filePath + "&embedded=true" + "\" target=\"_blank\">"+ StringUtil.stripAllHtmlTag(fileName)+"</a>";
+                            result += "<a href=\""+ "https://docs.google.com/viewer?url=https://" + request.getServerName() + ":" + request.getServerPort() + filePath + "&embedded=true" + "\" target=\"_blank\">"+ StringUtil.stripAllHtmlTag(fileName)+"</a>";
                         }else{
                             result += "<a href=\""+filePath+"\" target=\"_blank\">"+StringUtil.stripAllHtmlTag(fileName)+"</a>";
                         }
